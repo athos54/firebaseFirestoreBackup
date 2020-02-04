@@ -3,7 +3,7 @@ var fs = require('fs');
 var path = require('path');
 var moment = require('moment');
 
-var serviceAccount = require("./credentials/your-project-firebase-adminsdk-dtazl-af18760cdf3e.json");
+var serviceAccount = require(path.join(__dirname, "./credentials/your-project-firebase-adminsdk-dtazl-af18760cdf3e.json"));
 var databaseURL = "https://your-project.firebaseio.com";
 
 admin.initializeApp({
