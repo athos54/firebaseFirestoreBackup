@@ -5,6 +5,7 @@
     "description": "Firestore. Create firestore backup.",
     "main": "index.js",
     "scripts": {
+        "start": "node ./app/backup.js",
         "backup": "node ./app/backup.js",
         "backup:watch": "rm -rf ./backupsFiles/* && node --inspect ./app/backup.js",
         "restore": "node ./app/restore.js",
