@@ -1,0 +1,21 @@
+{
+    "name": "sporttogobackups",
+    "version": "1.0.0",
+    "author": "Athos Orío Choperena",
+    "description": "Firestore. Create firestore backup.",
+    "main": "index.js",
+    "scripts": {
+        "backup": "node ./app/backup.js",
+        "backup:watch": "rm -rf ./backupsFiles/* && node --inspect ./app/backup.js",
+        "restore": "node ./app/restore.js",
+        "restore:watch": "rm -rf ./backupsFiles/* && node --inspect ./app/restore.js"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "nodemon": "^1.19.2"
+    },
+    "dependencies": {
+        "firebase-admin": "^8.4.0",
+        "moment": "^2.24.0"
+    }
+}
