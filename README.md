@@ -5,7 +5,9 @@ Run `docker-compose up --build`
 This generate a folder with 3 sub-folders, db, users and storage
 
 **db** subfolder save a copy of all documents of your database each time you execute this docker-compose file
+
 **users** save a file with firebase auth user, only one file even if you run this docker-compose file several times
+
 **storage** save all files you have on the storage of the project.
 
 If is the first time you run this command, you see a few steps to generate firebase token.
