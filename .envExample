@@ -1,0 +1,4 @@
+PROJECTID=yourProjectId-7dw323
+CERT_FILE=cert.json
+DATABASE_URL=https://yourProjectId-7dw323.firebaseio.com
+FIREBASE_TOKEN=tokenGeneratedOnFirebaseUrl(see instructions)
