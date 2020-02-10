@@ -1,3 +1,5 @@
 app/credentials/*.json
 node_modules
 backupsFiles
+.env
+src/app/credentials/*.json

@@ -1,5 +1,5 @@
 {
-    "name": "sporttogobackups",
+    "name": "firebaseBackups",
     "version": "1.0.0",
     "author": "Athos Orío Choperena",
     "description": "Firestore. Create firestore backup.",

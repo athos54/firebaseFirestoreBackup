@@ -3,8 +3,8 @@ var fs = require('fs');
 var path = require('path');
 var moment = require('moment');
 
-var serviceAccount = require(path.join(__dirname, "./credentials/your-project-firebase-adminsdk-dtazl-af18760cdf3e.json"));
-var databaseURL = "https://your-project.firebaseio.com";
+var serviceAccount = require(path.join(__dirname, "./credentials/" + process.env.CERT_FILE));
+var databaseURL = process.env.DATABASE_URL;
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
@@ -36,7 +36,7 @@ async function main() {
     console.log(collections);
 
     const rand = moment().format('YYYY-MM-DD-HH-mm') + '_' + Math.random();
-    const destinyPath = path.join(__dirname, '..', 'backupsFiles', rand);
+    const destinyPath = path.join(__dirname, '..', 'backupsFiles','db', rand);
 
     fs.mkdirSync(destinyPath);
 
