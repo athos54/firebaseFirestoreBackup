@@ -17,6 +17,7 @@ RUN npm install -g n
 RUN n 10.16.3
 
 #CONFIG TIMEZONE
+RUN apt-get install tzdata -y
 RUN cp /usr/share/zoneinfo/Europe/Madrid /etc/localtime
 
 #INSTALL FIREBASE-TOOLS

@@ -29,7 +29,7 @@ then
     echo "******************************************************"
     
 else
-    node  --max-old-space-size=4096 /app/src/app/backupDB.js && \
+    node --max-old-space-size=4096 /app/src/app/backupDB.js && \
     firebase --project $PROJECTID auth:export /app/src/backupsFiles/users/users.json && \
     gsutil -m cp -R gs://$PROJECTID.appspot.com /app/src/backupsFiles/storage/
 fi
