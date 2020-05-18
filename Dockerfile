@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-
+ENV DEBIAN_FRONTEND=noninteractive
 #INSTALL GCLOUD
 RUN apt update -y
 RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
@@ -15,6 +15,9 @@ COPY ./src /app/src
 RUN npm cache clean -f
 RUN npm install -g n
 RUN n 10.16.3
+
+#CONFIG TIMEZONE
+RUN cp /usr/share/zoneinfo/Europe/Madrid /etc/localtime
 
 #INSTALL FIREBASE-TOOLS
 RUN npm install -g firebase-tools
